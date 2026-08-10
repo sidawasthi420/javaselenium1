@@ -44,8 +44,8 @@ public class Selenium2 {
     
         driver.findElement(By.cssSelector("input[id^='customer_em']")).sendKeys("mukulvarshney7071@gmail.com");
        
-                driver.findElement(By.cssSelector("input[id$='comer_password']")).sendKeys("mukul varshney");
+                driver.findElement(By.cssSelector("input[id$='omer_password']")).sendKeys("mukul varshney");
 
-        //driver.quit();   //  close the browser window
-    }
+        driver.quit();   //  close the browser window
+    }gi
 }
