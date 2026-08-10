@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 public class amazon {
 public static void main(String[]args) throws Exception
 {
+
+   /// amazon website testing
   WebDriver driver = new ChromeDriver();
   driver.get("https://www.amazon.in");
   Thread.sleep(2000);
