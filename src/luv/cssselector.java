@@ -32,7 +32,7 @@ driver.findElement(By.cssSelector("a[class^='a-link-normal']")).click();
 
 
   //driver.findElement(By.className("nav-line-1-container")).click();
-  //driver.findElement(By.id("ap_email_login")).sendKeys("9910858927");
+  driver.findElement(By.id("ap_email_login")).sendKeys("9910858927");
   //Thread.sleep(2000);
   driver.findElement(By.id("continue")).click();
   driver.findElement(By.id("auth-fpp-link-bottom")).click();
