@@ -21,7 +21,7 @@ Thread.sleep(2000);
 driver.findElement(By.cssSelector("a[href='/fresh?ref_=nav_cs_fresh']")).click();
 Thread.sleep(2000);
 driver.findElement(By.cssSelector("a[class^='a-link-normal']")).click();
-
+///flkejnfkhf
 ///attribute css selector
 // ////location
 //driver.findElement(By.cssSelector("span[id='glow-ingress-line2']")).click();
