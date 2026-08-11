@@ -2,7 +2,6 @@ package selenium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class selenium1 {
@@ -17,9 +16,6 @@ public class selenium1 {
          Thread.sleep(5000);
 
          String actualTitle = driver.getTitle();
-
-         //System.out.println(actualTitle);
-         ///System.exit(0);/// it will terminate the programme
 
         if(actualTitle.equals(expectedTitle)){
                System.out.println("Website opened successfully");
@@ -61,8 +57,9 @@ public class selenium1 {
 
         //Elevate Your Skills with Tailored, Enhanced Software Training!
         driver.findElement(By.partialLinkText("Your Skills with Tailored,")).click();
+        
         Thread.sleep(10000);
-        // driver.close();// currently opened window
-        driver.quit();/// closes all window
+        
+        driver.quit();
     }
 }
