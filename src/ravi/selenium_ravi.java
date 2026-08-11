@@ -22,8 +22,11 @@ public class selenium_ravi {
         else{
             System.out.println("Invalid page");
         }
-        Thread.sleep(3000);
-        driver.findElement(By.id("search")).isDisplayed();
+        Thread.sleep(3000); 
+        driver.findElement(By.xpath("(//li[contains(@class,'top')])[1]")).click();    //selecting locator By.xpath contains
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("(//div[contains(@class,'preview')])[1]")).click();//clicking out side dialog box
+        //driver.findElement(By.id("search")).isDisplayed();
         Thread.sleep(3000);
         driver.findElement(By.linkText("Careers")).click(); //selecting locator By.linktext()
         Thread.sleep(2000);
