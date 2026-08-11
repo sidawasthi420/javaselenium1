@@ -47,5 +47,5 @@ public class Selenium2 {
                 driver.findElement(By.cssSelector("input[id$='omer_password']")).sendKeys("mukul varshney");
 
         driver.quit();   //  close the browser window
-    }gi
+    }
 }
