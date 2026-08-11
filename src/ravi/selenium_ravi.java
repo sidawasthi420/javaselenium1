@@ -36,14 +36,14 @@ public class selenium_ravi {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
 
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         driver.findElements(By.name("email")).get(0).sendKeys("test@gmail.com"); //locator By.name();
 
         Thread.sleep(3000);
 
         js.executeScript("window.scrollTo(0,0)");
 
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         WebElement search = driver.findElement(By.id("search"));    //selecting locator By.id();
         search.clear();
