@@ -43,7 +43,7 @@ public class selenium_cssSelector {
 
         //cSSSelector with SubString - matching substring
         driver.findElement(By.cssSelector("div[class*='fadeInUp courses']")).isDisplayed();
-        // driver.close();// currently opened window
-        driver.quit();/// closes all window
+        
+        driver.quit();
     }
 }
