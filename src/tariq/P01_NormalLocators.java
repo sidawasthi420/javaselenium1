@@ -57,5 +57,7 @@ public class P01_NormalLocators {
 
         List<WebElement> imagesList = driver.findElements(By.tagName("img"));
         System.out.println("Total number of images on home page:- " + imagesList.size());
+
+        driver.close();
     }
 }
