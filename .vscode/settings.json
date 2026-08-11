@@ -76,6 +76,5 @@
         "d:\\vscode_workspace\\lib\\selenium-safari-driver-4.46.0-sources.jar",
         "d:\\vscode_workspace\\lib\\selenium-support-4.46.0.jar",
         "d:\\vscode_workspace\\lib\\selenium-support-4.46.0-sources.jar"
-    ],
-    "java.compile.nullAnalysis.mode": "automatic"
+    ]
 }
