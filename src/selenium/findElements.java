@@ -1,5 +1,7 @@
 package selenium;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class selenium_xpath {
+public class findElements {
 
     public static void main(String[] args) throws InterruptedException {
         
@@ -25,10 +27,28 @@ public class selenium_xpath {
         //Thread.sleep(2000);
 
         //xpath for Online Classes
-        driver.findElement(By.xpath("//a[@href='courses.html' and @class='col-lg-3 col-sm-6 wow fadeInUp']")).click();
+        //driver.findElement(By.xpath("//a[@href='courses.html']")).click();  //returns single WebElement
+        //If element is not found in findElement - it will through an error [ org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element ]
         //If multiple webelements are found using findElement than it will perform operation on the vary first element being found
+
+        //WebElement courseLink = driver.findElement(By.xpath("//a[@href='courses.html']"));
+        //courseLink.click();
         Thread.sleep(2000);
 
+        //driver.findElements(By.xpath("//a[@href='courses.html']")).get(3).click();
+        List<WebElement> coursesList = driver.findElements(By.xpath("//a[@href='courses.html']"));   //returns List<WebElement>  
+        //It will not through an error instead create an empty list having zero webelement
+        Thread.sleep(2000);
+        
+        //Click on Courses link on top of screen
+        //coursesList.get(0).click();
+        //Thread.sleep(2000);
+
+        //Click on Online Couses link
+        coursesList.get(3).click();
+        Thread.sleep(2000);
+
+        //Click on Automation Course Image
         driver.findElement(By.xpath("//img[starts-with(@src,'img/cat-1')]")).click();
         Thread.sleep(2000);
 
@@ -50,6 +70,13 @@ public class selenium_xpath {
         }
         Thread.sleep(3000);
 
+        driver.findElement(By.xpath("//form[@id='registrationForm']//following::input[@placeholder='Enter your full name']")).sendKeys("Sid Awasthi");
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//form[@id='registrationForm']//following::input[@placeholder='Enter your full name']")).clear();
+        Thread.sleep(3000);
+
+        
         driver.findElement(By.xpath("//form[@id='registrationForm']//following::input[@placeholder='Enter your full name']")).sendKeys("Siddhant Awasthi");
         Thread.sleep(3000);
 
@@ -61,7 +88,7 @@ public class selenium_xpath {
 
         WebElement dropdownBox = driver.findElement(By.xpath("//label[@for='course']//following-sibling::select"));
         //Dropdown
-       // Select dropdown = new Select(driver.findElement(By.xpath("//label[@for='course']//following-sibling::select")));
+        // Select dropdown = new Select(driver.findElement(By.xpath("//label[@for='course']//following-sibling::select")));
         Select dropdown = new Select(dropdownBox);
         dropdown.selectByVisibleText("Data Driven & Cucumber Framework");
         Thread.sleep(3000);
@@ -71,6 +98,9 @@ public class selenium_xpath {
         Thread.sleep(3000);
 
         driver.findElement(By.xpath("//div[@class='registration-form']//descendant::input[@type='date']")).sendKeys("31-08-2026");
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//form[@id='registrationForm']//following::input[@placeholder='Enter your full name']")).submit();
         Thread.sleep(3000);
 
         driver.quit();
