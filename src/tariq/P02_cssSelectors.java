@@ -5,15 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class P02_cssSelectors {
+public class P02_CSSSelectors {
 
     public static void main(String[] args) throws InterruptedException {
 
-        P02_cssSelectors obj = new P02_cssSelectors();
-//        obj.cssSelectorOld();
+        P02_CSSSelectors obj = new P02_CSSSelectors();
+//      obj.cssSelectorOld();
         obj.cssSelectorNew();
-      
-
+    
     }
 
     public void cssSelectorOld() throws InterruptedException{
@@ -65,7 +64,7 @@ public class P02_cssSelectors {
         WebElement getHeading = driver.findElement(By.cssSelector("h5.wp-block-heading"));
         System.out.println(getHeading.getText());
 
-        driver.quit();
+        driver.close();
     }
 
     public void cssSelectorNew() throws InterruptedException{
