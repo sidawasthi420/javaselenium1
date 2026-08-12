@@ -7,20 +7,70 @@ public class cssselector {
 public static void main(String[]args) throws Exception
 {
   WebDriver driver = new ChromeDriver();
-  driver.get("https://www.amazon.in/");
+  driver.get("https://www.flipkart.com/");
   Thread.sleep(2000);
-    //driver.findElement(By.className("a-button-text")).click();
-  //Thread.sleep(2000);
+///class css selector
+  driver.findElement(By.cssSelector("span.b3wTlE")).click();
+  Thread.sleep(2000);
+////class css selector
+driver.findElement(By.cssSelector("span.v1zwn27")).click();
+  Thread.sleep(2000);
+
+ //class css selector 
+driver.findElement(By.cssSelector("a.nYcTDx")).click();
+Thread.sleep(2000);
+
+///attribute css selector
+driver.findElement(By.cssSelector("div[class='XizdcU Zl53fz']")).click();
+Thread.sleep(2000);
+
+//class css selector
+driver.findElement(By.cssSelector("a.DDNGCa")).click();
+Thread.sleep(2000);
+
+/////prefix substring
+driver.findElement(By.cssSelector("button[class^='styles__ButtonStyle']")).click();
+Thread.sleep(2000);
+
+////suffix css selector
+driver.findElement(By.cssSelector("div[class$='login-input-container']")).click();
+Thread.sleep(2000);
+
+///matching substring
+driver.findElement(By.cssSelector("button[class*='sc-oTaAA eBoKzo']")).click();
+Thread.sleep(2000);
+driver.close();
+
+
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   ////class css selector
-  driver.findElement(By.cssSelector("span.hm-icon-label")).click();
-Thread.sleep(2000);
+  //driver.findElement(By.cssSelector("span.hm-icon-label")).click();
+//Thread.sleep(2000);
 ////id css selector
-driver.findElement(By.cssSelector("div#hmenu-close-icon")).click();
-Thread.sleep(2000);
-driver.findElement(By.cssSelector("a[href='/fresh?ref_=nav_cs_fresh']")).click();
-Thread.sleep(2000);
-driver.findElement(By.cssSelector("a[class^='a-link-normal']")).click();
+//driver.findElement(By.cssSelector("div#hmenu-close-icon")).click();
+//Thread.sleep(2000);
+//driver.findElement(By.cssSelector("a[href='/fresh?ref_=nav_cs_fresh']")).click();
+//Thread.sleep(2000);
+//driver.findElement(By.cssSelector("a[class^='a-link-normal']")).click();
 ///flkejnfkhf
 ///attribute css selector
 // ////location
@@ -29,22 +79,6 @@ driver.findElement(By.cssSelector("a[class^='a-link-normal']")).click();
 
 
 
-  //driver.findElement(By.className("nav-line-1-container")).click();
-  driver.findElement(By.id("ap_email_login")).sendKeys("9910858927");
-  //Thread.sleep(2000);
-  driver.findElement(By.id("continue")).click();
-  driver.findElement(By.id("auth-fpp-link-bottom")).click();
-  Thread.sleep(2000);
-  driver.findElement(By.name("signIn")).click();
-  Thread.sleep(2000);
-  driver.findElement(By.tagName("select")).click();
-  Thread.sleep(2000);
-  driver.findElement(By.className("a-link-nav-icon")).click();
-  Thread.sleep(2000);
-  driver.findElement(By.cssSelector("span.hm-icon-label")).click();
 
 
-
-  driver.close();
-}
-}
+  //driver.close();
