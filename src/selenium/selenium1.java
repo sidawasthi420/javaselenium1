@@ -2,12 +2,11 @@ package selenium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class selenium1 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         
          WebDriver driver= new ChromeDriver();
          driver.get("https://shivohamautomation.com/");
@@ -17,9 +16,6 @@ public class selenium1 {
          Thread.sleep(5000);
 
          String actualTitle = driver.getTitle();
-
-         //System.out.println(actualTitle);
-         ///System.exit(0);/// it will terminate the programme
 
         if(actualTitle.equals(expectedTitle)){
                System.out.println("Website opened successfully");
@@ -51,14 +47,19 @@ public class selenium1 {
         //Thread.sleep(3000);
 
         //Click on Enhanced Learning
-        driver.findElement(By.tagName("he5")).click();
+        //driver.findElement(By.tagName("he5")).click();
 
         
-        Thread.sleep(10000);
+       // Thread.sleep(10000);
 
         //Course Overview webelement need to get visible on web page
-        driver.findElement(By.linkText("Course Overview")).isDisplayed();  //org.openqa.selenium.NoSuchElementException
-        // driver.close();// currently opened window
-        driver.quit();/// closes all window
+        //driver.findElement(By.linkText("Enhanced Learning")).click(); //org.openqa.selenium.NoSuchElementException
+
+        //Elevate Your Skills with Tailored, Enhanced Software Training!
+        driver.findElement(By.partialLinkText("Your Skills with Tailored,")).click();
+        
+        Thread.sleep(10000);
+        
+        driver.quit();
     }
 }
