@@ -8,8 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+////xpath practise for selecting locators by.xpath;by.linktext();by.partial linktext();by.name();by.id();by.tagname();by.css selector().
+
 public class selenium_ravi {
-    public static void main(String st[]) throws InterruptedException{
+    public static void main(String st[]) throws InterruptedException{   //xpath practise for selecting locators by.xpath;by.linktext();by.partial linktext();by.name();by.id();by.tagname();by.css selector().
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.chinooklumber.com/");
@@ -75,6 +77,7 @@ public class selenium_ravi {
          Thread.sleep(3000);
          driver.findElement(By.cssSelector(".text")).click();  //selecting locator By css selector (using class)
          Thread.sleep(2000);
-         driver.close();
+         //driver.close();
+         driver.quit();
     }
 }
