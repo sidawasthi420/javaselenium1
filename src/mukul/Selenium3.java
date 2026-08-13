@@ -78,31 +78,5 @@ import org.openqa.selenium.support.ui.Select;
 
         driver.quit();
 
-
-
-
-
-        //tagname[@attribut='attributValue']//xpathAxes::tagname[@attribut='attributValue']//xpathAxes::tagname[@attribut='attributValue']
-        //label[text()='Preferred Start Date']//ancestor::form//preceding-sibling::h2
-        //form[@id='registrationForm']//descendant::input[@name='phone']
-        //form[@id='registrationForm']//descendant::button
-
-
-
-        //div[@class='text-center']//child::button[@type='submit']
-        //input[@name='phone']//following::button[@type='submit']
-        //form[@id='registrationForm']//descendant::button[@type='submit']
-        //input[@id='name']//parent::div//following-sibling::div//child::button
-
-      
-
-
-
-
-
-
-
-
-
     }
 }
