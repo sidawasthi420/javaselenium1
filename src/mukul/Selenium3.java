@@ -1,6 +1,7 @@
 package mukul;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,6 +11,8 @@ import org.openqa.selenium.support.ui.Select;
 
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
+
+        driver.manage().window().maximize();
 
         driver.get("https://www.shivohamautomation.com/");
 
@@ -58,18 +61,22 @@ import org.openqa.selenium.support.ui.Select;
 
         Select dropdown = new Select(dropdownBox);
         dropdown.selectByVisibleText("Selenium");
-                Thread.sleep(3000);
+        Thread.sleep(3000);
 
         dropdown.selectByIndex(3);
-                Thread.sleep(3000);
+        Thread.sleep(3000);
 
         dropdown.selectByValue("core-java");
-                Thread.sleep(3000);
+        Thread.sleep(3000);
 
        
-        driver.findElement(By.xpath("//input[@type='date']")).sendKeys("14-08-2026");
+        driver.findElement(By.xpath("//input[@type='date']")).sendKeys("28-08-2026");
 
         Thread.sleep(3000);
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0,400)");
+        Thread.sleep(5000);
 
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
