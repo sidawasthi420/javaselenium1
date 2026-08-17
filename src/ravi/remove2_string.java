@@ -2,6 +2,9 @@ package ravi;
 
 public class remove2_string {  // remove all the consecutive duplicate characters from string
 
+    //StringBuilder → Not thread-safe because its methods are not synchronized.
+    //StringBuffer → Thread-safe because its methods are synchronized.
+
     public static void main(String st[]){
         String str = "abbaca";
         char[] str1 = str.toCharArray();
