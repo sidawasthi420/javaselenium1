@@ -1,5 +1,6 @@
 package selenium;
 
+import java.time.Duration;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -12,18 +13,17 @@ public class selenium_window_handle {
 
         WebDriver driver= new ChromeDriver();
 
+        //driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS());        //Selenium 3.14
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
         driver.manage().window().maximize();
         
         driver.get("https://qaplayground.com/practice/tabs-windows");
 
-        Thread.sleep(10000);
-
         String mainWindowHandle = driver.getWindowHandle();
-        Thread.sleep(1000);
 
         driver.findElement(By.id("tw-tab-c")).click();
-        Thread.sleep(3000);
-
+ 
         Set<String> windowHandles = driver.getWindowHandles();
 
         for(String handle : windowHandles)
@@ -33,7 +33,6 @@ public class selenium_window_handle {
                 driver.switchTo().window(handle);
             }
         }
-        Thread.sleep(3000);
 
         String newTabLabel = driver.findElement(By.xpath("//nav[@aria-label='Breadcrumb']//following-sibling::div/h1")).getText();
         if(newTabLabel.contains("How to Handle Links in Selenium and Playwright"))
@@ -45,10 +44,8 @@ public class selenium_window_handle {
         }
         
         driver.close();
-        Thread.sleep(3000);
 
         driver.switchTo().window(mainWindowHandle);
-        Thread.sleep(3000);
 
         driver.close();
     }

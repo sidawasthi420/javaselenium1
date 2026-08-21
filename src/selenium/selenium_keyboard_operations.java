@@ -1,7 +1,5 @@
 package selenium;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -23,7 +21,6 @@ public class selenium_keyboard_operations {
 
         WebElement emailInputBox = driver.findElement(By.name("email"));
         //Thread.sleep(5000);
-        
         //WebElement passwordInputBox = driver.findElement(By.name("pass"));
         //Thread.sleep(5000);
 
